@@ -1,0 +1,22 @@
+public class Solution {
+	
+	public static boolean checkNumber(int input[], int x) {
+		
+        return checkNumber(input,x,0);
+		
+	}
+    
+    public static boolean checkNumber(int a[],int x, int si){
+        if(si==a.length){
+        return false;
+    }
+    
+        if(x==a[si]){
+            return true;
+        }
+        
+        boolean smallanswer=checkNumber(a,x,si+1);
+        return smallanswer;
+            
+    }
+}

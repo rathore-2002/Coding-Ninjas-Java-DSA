@@ -1,0 +1,21 @@
+
+public class Solution {
+
+	public static int firstIndex(int input[], int x) {
+		
+        return firstIndex(input,x,0);
+		
+	}
+	
+    
+    public static int firstIndex(int a[],int x,int si){
+        if(si==a.length)
+            return -1;
+        
+        if(a[si]==x)
+            return si;
+        
+        int smallanswer=firstIndex(a,x,si+1);
+        return smallanswer;
+    }
+}

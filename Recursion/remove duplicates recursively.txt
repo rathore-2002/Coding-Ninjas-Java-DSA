@@ -1,0 +1,15 @@
+public class Solution {
+
+	public static String removeConsecutiveDuplicates(String s) {
+		// Write your code here
+        if(s.length()<=1)                  //Super important otherwise runtime error
+            return s;
+        String smallOutput=removeConsecutiveDuplicates(s.substring(1));
+        if(s.charAt(0)==smallOutput.charAt(0))
+            return smallOutput;
+        else
+            return s.charAt(0)+smallOutput;
+
+	}
+
+}

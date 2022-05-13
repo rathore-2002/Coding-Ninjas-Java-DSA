@@ -1,0 +1,16 @@
+public class Solution {
+
+	public static int sum(int input[]) {
+		
+       return sum(input,0);
+		
+	}
+    
+    public static int sum(int a[],int si){
+        if(si==a.length-1)
+            return a[si];
+        
+        int smallsum=sum(a,si+1);
+        return a[si]+smallsum;
+    }
+}
